@@ -1,12 +1,12 @@
 .carousel-wrapper {
-  width: 100vw;
   overflow-x: hidden;
+  width: 100vw;
 
   .carousel {
-    margin: 2em 0;
     display: flex;
-    justify-content: center;
     height: 65vh;
+    margin: 2em 0;
+    justify-content: center;
 
     .carousel-items {
       width: 80%;
