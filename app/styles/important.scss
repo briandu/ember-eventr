@@ -1,0 +1,19 @@
+// NOTE: classes prefixed by i- use !important
+// scss-lint:disable ImportantRule
+
+.i-hidden {
+  display: none !important;
+}
+
+.i-invisible {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.i-capitalize {
+  text-transform: capitalize !important;
+}
+
+.i-uppercase {
+  text-transform: uppercase !important;
+}

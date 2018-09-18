@@ -1,0 +1,16 @@
+body {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: $color-grey-2;
+  font-family: $font-family-montserrat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-wrapper {
+  @include layout-container;
+}

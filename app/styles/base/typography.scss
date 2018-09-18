@@ -1,0 +1,51 @@
+// ======== Defaults ========
+// font-size: 16px;
+// font-weight: regular;
+// color: $color-blue-grey-4;
+
+p {
+  line-height: 1.3em;
+}
+
+.typography-a {
+  h1 {
+    font-size: 48px;
+    line-height: calc(58 / 48);
+    color: $color-white;
+    text-shadow: $text-shadow;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: calc(36 / 34);
+    padding-top: 2.5em;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 1.4em;
+    padding-top: 1.5em;
+    font-weight: $font-weight-light;
+  }
+
+  h4,
+  h5 {
+    font-size: 26px;
+    line-height: (30 / 26);
+  }
+
+  h4,
+  h6 {
+    color: $color-blue-dark;
+  }
+
+  h6 {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: calc(23 / 17);
+    padding-top: 1em;
+  }
+}

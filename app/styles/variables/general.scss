@@ -1,0 +1,52 @@
+// --------- Widths --------
+$max-width-app: 1200px;
+$max-width-text: 900px;
+$width-advanced-search-dropdown: 73%;
+$width-hover-popup: 280px;
+
+// -------- Heights --------
+$height-top-nav: 60px;
+$height-top-nav-mobile: 55px;
+$height-top-nav-panel: 170px;
+$height-hero-hav-subnav: 60px;
+$height-input-control: 35px;
+$height-advanced-search: 54px;
+
+// ------ Animations -------
+$transition-duration-fast: .2s;
+$transition-duration:      .4s;
+$transition-duration-slow: .8s;
+
+// --------- Border --------
+$border: 1px solid $color-grey-3;
+$border-darker: 1px solid $color-grey-4;
+
+// ----- Border Radius -----
+$border-radius-small:  2px;
+$border-radius-medium: 4px;
+$border-radius-large:  8px;
+
+// ------ box-shadow -------
+$box-shadow-top: 0 0 4px 0 $color-black-25;
+$box-shadow: 0 1px 2px $color-black-25;
+$box-shadow-spread: 0 1px 2px 1px $color-black-35;
+
+// ------ text-shadow ------
+$text-shadow: 2px 0 9px $color-black-50;
+$text-shadow-darker: 0 1px 4px $color-black;
+
+// ------ Breakpoints ------
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-top-nav: $breakpoint-tablet;
+$breakpoint-ad-leaderboard: $breakpoint-top-nav; // grater than 728px padding on both sides
+$breakpoint-search-mobile: 758px; // TODO: Change this back to 500px
+
+// -------- Other ----------
+$ios-controls-height: 74px;
+$ios-vertical-height: calc(100vh - #{$ios-controls-height});
+
+// -------- Component Specific ----------
+$card-footer-height: 4em;
+
+// ----- Page Specific -----

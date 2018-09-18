@@ -1,0 +1,28 @@
+& {
+  background-color: $color-white;
+  display: block;
+  padding: 1.5em 0;
+}
+
+nav {
+  @include layout-container;
+  height: 2em;
+}
+
+.nav-links {
+  float: right;
+  line-height: 2em;
+
+  li {
+    display: inline-block;
+    margin-left: 1.5em;
+    vertical-align: middle;
+
+    &:last-of-type {
+      background-color: $color-grey-5;
+      height: 2em;
+      width: 2em;
+      border-radius: 2em;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+button,
+input[type="text"] {
+  &.left-attached {
+    @include border-left-radius(0);
+  }
+
+  &.right-attached {
+    @include border-right-radius(0);
+  }
+}
+
+button,
+img,
+pin {
+  user-select: none;
+}

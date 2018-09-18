@@ -1,0 +1,201 @@
+@mixin hover-and-active-background-colors($color-background, $darken-hover: 4%, $darken-active: 15%, $color: null) {
+  &:not(.btn-progress):not(.disabled) {
+    &:hover {
+      background-color: opacify(darken($color-background, $darken-hover), .01);
+      @if $color { color: $color; }
+
+      &:active {
+        background-color: opacify(darken($color-background, $darken-active), .05);
+      }
+    }
+  }
+}
+
+@mixin nib-bottom($color-background, $color-border, $size: 14px, $border: 2px) {
+  $inner-size: $size - $border;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    pointer-events: none;
+  }
+
+  &::before {
+    border-color: transparent;
+    border-top-color: $color-grey-3;
+    border-width: $size;
+    margin-left: -$size;
+  }
+
+  &::after {
+    border-color: transparent;
+    border-top-color: $color-background;
+    border-width: $inner-size;
+    margin-left: -$inner-size;
+  }
+}
+
+@mixin nib($position, $color, $size, $offset: 1) {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  @if ($position == 'top') {
+    top: -#{$size}px;
+    border-right: #{$size + $offset}px solid transparent;
+    border-bottom: #{$size}px solid $color;
+    border-left: #{$size + $offset}px solid transparent;
+  } @elseif ($position == 'right') {
+    right: -#{$size}px;
+    border-top: #{$size + $offset}px solid transparent;
+    border-bottom: #{$size + $offset}px solid transparent;
+    border-left: #{$size}px solid $color;
+  } @elseif ($position == 'bottom') {
+    bottom: -#{$size}px;
+    border-top: #{$size}px solid $color;
+    border-right: #{$size + $offset}px solid transparent;
+    border-left: #{$size + $offset}px solid transparent;
+  } @elseif ($position == 'left') {
+    left: -#{$size}px;
+    border-top: #{$size + $offset}px solid transparent;
+    border-right: #{$size}px solid $color;
+    border-bottom: #{$size + $offset}px solid transparent;
+  }
+}
+
+// Overwrite the default bourboun ellipsis mixin
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin pin-of-size($height, $border: 2) {
+  $size: $height + $border;
+  $half-size: $size / 2;
+  width: $size + px;
+  height: $size + px;
+  border: $border + px solid $color-white;
+  margin-top: -$half-size + px;
+  margin-left: -$half-size + px;
+  line-height: $height + px;
+}
+
+@mixin vertical-align($offset) {
+  position: relative;
+  top: $offset;
+  transform: translateY(-$offset);
+}
+
+@mixin horizontal-align($offset) {
+  position: relative;
+  left: $offset;
+  transform: translateX(-$offset);
+}
+
+@mixin vertical-align-middle {
+  @include vertical-align(50%);
+}
+
+@mixin vertical-align-bottom {
+  @include vertical-align(100%);
+}
+
+@mixin horizontal-align-middle {
+  @include horizontal-align(50%);
+}
+
+@mixin center-align {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin animation-progress-bar {
+  background-image: linear-gradient(-45deg, currentColor 25%, transparent 25%, transparent 50%, currentColor 50%, currentColor 75%, transparent 75%, transparent);
+  animation: progressBarStripes .5s linear infinite;
+  background-size: 24px 24px;
+  opacity: .1;
+}
+
+@mixin bold-text {
+  // NOTE: This give a similar effect to bolding the text but without changing the container size and moving elements around.
+  text-shadow: 0 0 0 currentColor;
+}
+
+@mixin line-separator($margin: 1em) {
+  >:not(:last-child):not(:empty)::after {
+    content: '|';
+    margin: $margin;
+  }
+}
+
+@mixin fit-to-corners {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin cover-screen($background-color: transparent) {
+  @include fit-to-corners;
+  content: '';
+  background-color: $background-color;
+}
+
+@mixin blur-text {
+  user-select: none;
+  color: transparent !important; // scss-lint:disable ImportantRule
+  text-shadow: 0 0 .5em $color-blue-grey-5;
+}
+
+@mixin scroll-x {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+@mixin scroll-y {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+@mixin vertical-gradients($size: 25px) {
+  &.show-gradient {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: $z-index-bump;
+      right: 0;
+      left: 0;
+      height: $size;
+      pointer-events: none;
+      transition: opacity $transition-duration-fast;
+    }
+
+    &::before {
+      top: 0;
+      background-image: linear-gradient(to bottom, rgba($color-white, .8), $color-transparent);
+    }
+
+    &::after {
+      bottom: 0;
+      background-image: linear-gradient(to top, rgba($color-white, .8), $color-transparent);
+    }
+
+    &.scroll-at-top::before,
+    &.scroll-at-bottom::after {
+      display: none;
+    }
+  }
+}

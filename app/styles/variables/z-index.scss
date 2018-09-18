@@ -1,0 +1,31 @@
+// --------------- Z-Index Scale (Private Variables) ---------------
+$z-index-sub:  -1;
+$z-index-bump: 1;
+$z-index-1:    100;
+$z-index-2:    200;
+$z-index-3:    300;
+$z-index-4:    400;
+$z-index-5:    500;
+$z-index-6:    600;
+$z-index-7:    700;
+$z-index-8:    800;
+$z-index-9:    900;
+
+// ------------ Z-Index Applications (Public Variables) ------------
+// ------------- ordered by priority from top to bottom ------------
+$z-index-modal:                         $z-index-9;
+$z-index-hover-popup:                   $z-index-8;
+$z-index-404-pin:                       $z-index-8;
+$z-index-loading-bar:                   $z-index-9;
+$z-index-top-nav:                       $z-index-7;
+$z-index-top-nav-overlay:               $z-index-6;
+$z-index-search-header-bar:             $z-index-5;
+$z-index-search-inputs-bar:             $z-index-4;
+$z-index-google-map-controls:           $z-index-3;
+$z-index-modal-close-bar:               $z-index-3;
+$z-index-favourite-listing:             $z-index-2;
+$z-index-map-screen-active:             $z-index-2;
+$z-index-search-sidebar:                $z-index-1;
+$z-index-nib:                           $z-index-sub;
+$z-index-application-loading-spinner:   $z-index-sub;
+$z-index-map-screen-inactive:           $z-index-sub;

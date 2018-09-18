@@ -1,0 +1,6 @@
+select {
+  // Hide the default select arrow on IE11
+  &::-ms-expand {
+    display: none;
+  }
+}

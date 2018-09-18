@@ -1,0 +1,94 @@
+button,
+.button {
+  font-size: 16px;
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 2em;
+  border: 0;
+  border-radius: $border-radius-medium;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.primary {
+    @include hover-and-active-background-colors($color-primary, 4%, 12%, $color-white);
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &.primary-blue {
+    @include hover-and-active-background-colors($color-blue-dark, 4%, 12%);
+    background-color: $color-blue-dark;
+    color: $color-white;
+  }
+
+  &.secondary {
+    @include hover-and-active-background-colors($color-primary-05, 4%, 12%);
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &.secondary-white {
+    @include hover-and-active-background-colors($color-white-25, 4%, 12%);
+    border: 1px solid $color-white;
+    color: $color-white;
+  }
+
+  &.secondary-grey {
+    @include hover-and-active-background-colors($color-blue-grey-3, 4%, 12%, $color-white);
+    border: $border;
+  }
+
+  &.small {
+    font-size: 13px;
+    height: 34px;
+    line-height: 34px;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.apply {
+    font-size: .75em;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    color: $color-primary;
+    letter-spacing: .05em;
+
+    &::before {
+      content: '✓ ';
+      font-size: 10px;
+      font-family: $font-family-fontello;
+    }
+
+    &:disabled {
+      color: $color-grey-3;
+    }
+  }
+
+  &.reload {
+    font-size: .75em;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    color: $color-black;
+    letter-spacing: .05em;
+
+    &::before {
+      content: '\e806';
+      font-size: 13px;
+      font-family: $font-family-fontello;
+    }
+
+    &:disabled {
+      color: $color-grey-3;
+    }
+  }
+}

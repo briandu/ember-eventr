@@ -1,0 +1,80 @@
+@mixin flex-wrap-around {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@mixin flex-wrap-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin layout-container($max-width: $max-width-app, $side-padding: 20px) {
+  max-width: $max-width;
+  padding-right: $side-padding;
+  padding-left: $side-padding;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  @media (min-width: ($breakpoint-mobile + 1)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($breakpoint-mobile + 1)) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($breakpoint-tablet + 1)) {
+    @content;
+  }
+}
+
+@mixin desktop-container($max-width: $max-width-app, $side-padding: 20px) {
+  @include desktop { @include layout-container($max-width, $side-padding) }
+}
+
+@mixin tablet-container($max-width: $max-width-app, $side-padding: 20px) {
+  @include tablet { @include layout-container($max-width, $side-padding) }
+}
+
+@mixin mobile-container($max-width: $max-width-app, $side-padding: 0) {
+  @include mobile { @include layout-container($max-width, $side-padding) }
+}

@@ -1,0 +1,9 @@
+<div class="carousel-wrapper">
+  <div class="carousel">
+    {{#each carousel key="@index" as |image index|}}
+    <div class="carousel-items" id="{{index}}">
+      <img src="{{image.imageUrl}}">
+    </div>
+    {{/each}}
+  </div>
+</div>
