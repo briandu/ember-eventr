@@ -8,7 +8,11 @@
 
 nav {
   @include layout-container;
-  height: 2em;
+	height: 2em;
+	
+	img {
+		height: 1.5em;
+	}
 }
 
 .nav-links {
