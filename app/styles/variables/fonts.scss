@@ -4,9 +4,10 @@ $font-family-montserrat:   'Montserrat', $font-family-helvetica, san-serif; // (
 // $font-family-fontello:     'fontello';
 
 // ------------------------- Font Weight Scale ----------------------
-// | thin | light | regular | semi-bold | bold | extra-bold | black |
-// |  100 |  300  |   400   |    600    |  700 |     800    |  900  |
+// | thin | light | regular | medium | semi-bold | bold | extra-bold | black |
+// |  100 |  300  |   400   |   500  |    600    |  700 |     800    |  900  |
 $font-weight-light:     300;
 $font-weight-regular:   400;
+$font-weight-medium:    500;
 $font-weight-semi-bold: 600;
 $font-weight-bold:      700;

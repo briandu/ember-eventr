@@ -5,7 +5,7 @@ $width-advanced-search-dropdown: 73%;
 $width-hover-popup: 280px;
 
 // -------- Heights --------
-$height-top-nav: 60px;
+$height-top-nav: 5em;
 $height-top-nav-mobile: 55px;
 $height-top-nav-panel: 170px;
 $height-hero-hav-subnav: 60px;
@@ -45,8 +45,5 @@ $breakpoint-search-mobile: 758px; // TODO: Change this back to 500px
 // -------- Other ----------
 $ios-controls-height: 74px;
 $ios-vertical-height: calc(100vh - #{$ios-controls-height});
-
-// -------- Component Specific ----------
-$card-footer-height: 4em;
 
 // ----- Page Specific -----

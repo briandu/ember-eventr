@@ -2,6 +2,8 @@
   display: block;
   padding: 1.5em 0;
   background-color: $color-white;
+  height: $height-top-nav;
+  box-sizing: border-box;
 }
 
 nav {
@@ -14,9 +16,14 @@ nav {
   line-height: 2em;
 
   li {
+    font-size: (14 / 16) * 1em;
     display: inline-block;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
     vertical-align: middle;
+
+    a {
+      color: $color-grey-9;
+    }
 
     &:last-of-type {
       width: 2em;
