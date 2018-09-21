@@ -3,7 +3,7 @@ $card-footer-height: 3.5em;
 $event-card-image-height: calc((26em - 3.5em) * .55);
 
 & {
-  margin: 0 .7em;
+  margin: 0 .7em 2em;
   flex-basis: 30%;
   flex-shrink: 1;
 }

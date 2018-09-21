@@ -1,16 +1,17 @@
 .button {
-  font-size: 16px;
+	font-size: (10 / 16) * 1em;
   display: inline-block;
-  height: 44px;
-  line-height: 44px;
-  padding: .5 1em;
-  background-color: transparent;
+  padding: 1.2em 2.4em;
   cursor: pointer;
-	outline: 0;
 	text-transform: uppercase;
+	color: $color-white;
 
 	&.white-outline {
 		border: 2px solid $color-white;
+	}
+
+	&.primary {
+		background-color: $color-grey-9;
 	}
 }
 

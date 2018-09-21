@@ -1,0 +1,54 @@
+.page-wrapper.discover {
+	header {
+		height: 20em;
+		overflow: hidden;
+
+		.content {
+			position: absolute;
+			margin-top: 7em;
+			width: 100%;
+			text-align: center;
+
+			h1 {
+				font-size: (20 / 16) * 1em;
+				color: $color-white;
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				margin-bottom: 1.5em;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.search-wrapper {
+		@include layout-container;
+		margin: -2.5em 0;
+		
+		.search-bar {
+			display: flex;
+			padding: 0 5em;
+	
+			text-input {
+				flex-grow: 1;
+				margin: -1px -1px;
+			}
+	
+			.button {
+				@include flex-center;
+				padding: 0 4em;
+
+				img {
+					height: 1.1em;
+					margin-right: .5em;
+				}
+			}
+		}
+	}
+
+	section {
+		margin-top: 8em;
+	}
+}

@@ -1,3 +1,23 @@
 <header>
+	<div class="content">
+		<h1>john legend: darkness and light</h1>
+		<div class="button white-outline">BUY TICKETS</div>
+	</div>
 	<img src="assets/header-john-legend.jpg">
 </header>
+
+<div class="search-wrapper">
+	<div class="search-bar">
+		{{text-input type='text' label='SEARCH'}}
+		{{text-input type='text' label='LOCATION'}}
+		{{text-input type='text' label='CATEGORY'}}
+		<div class="button primary">
+			<img src="assets/icons/icon-search-white.svg">
+			search
+		</div>
+	</div>
+</div>
+
+<section>
+	{{card-group model=model}}
+</section>
