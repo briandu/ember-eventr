@@ -23,19 +23,19 @@
 		}
 	}
 
-	.search-wrapper {
+  .search-wrapper {
 		@include layout-container;
-		margin: -2.5em 0;
-		
+
 		.search-bar {
 			display: flex;
 			padding: 0 5em;
-	
+			margin: -2.5em 0;
+
 			text-input {
 				flex-grow: 1;
 				margin: -1px -1px;
 			}
-	
+
 			.button {
 				@include flex-center;
 				padding: 0 4em;
