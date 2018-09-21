@@ -18,7 +18,7 @@
 @import 'layout';
 @import 'application';
 // @import 'animations';
-// @import 'base/button';
+@import 'base/button';
 // @import 'base/input';
 // @import 'base/link';
 // @import 'base/select';
@@ -27,7 +27,10 @@
 // @import 'important';
 
 // Pages
+@import 'pages/discover';
+@import 'pages/home';
 @import 'pages/login';
+@import 'pages/sign-up';
 
 // ===== PRIVATE STYLES  =====
 @import 'pod-styles'; // Managed by ember-component-css

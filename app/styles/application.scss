@@ -11,6 +11,9 @@ a {
   text-decoration: none;
 }
 
-// .page-wrapper {
-//   @include layout-container;
-// }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

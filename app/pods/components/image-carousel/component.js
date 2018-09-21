@@ -7,15 +7,15 @@ export default Component.extend({
   carousel: [
     {
       imageUrl: '/assets/image-carousel/dance-contemp.jpg',
-      content: 'Get a true valuation of what your home is worth today.'
+      title: 'Contemporary Love'
     },
     {
       imageUrl: '/assets/image-carousel/john-legend.jpg',
-      content: 'Prepared by one of our experienced preferred agents with knowledge of your area.'
+      title: 'John Legend: Darkness and Light'
     },
     {
       imageUrl: '/assets/image-carousel/weeknd.jpg',
-      content: 'No obligation or cost.'
+      title: 'No obligation or cost.'
     }
   ],
 });

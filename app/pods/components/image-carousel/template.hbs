@@ -3,6 +3,10 @@
     {{#each carousel key="@index" as |image index|}}
     <div class="carousel-items" id="{{index}}">
       <img src="{{image.imageUrl}}">
+			<div class='content'>
+				<h1>{{image.title}}</h1>
+				<div class="button white-outline">get tickets</div>
+			</div>
     </div>
     {{/each}}
   </div>

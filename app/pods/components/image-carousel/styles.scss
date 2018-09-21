@@ -10,10 +10,35 @@
 
     .carousel-items {
       width: 80%;
-      margin: 0 3em;
+      margin: 0 1.5em;
+      position: relative;
 
       img {
         height: 100%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        color: $color-white;
+
+        h1 {
+          font-size: 1.5em;
+          font-weight: $font-weight-bold;
+          text-transform: uppercase;
+          letter-spacing: .2em;
+        }
+
+        .button {
+          width: 10em;
+        }
       }
     }
   }
