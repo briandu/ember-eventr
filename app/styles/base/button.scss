@@ -8,17 +8,20 @@
 
 	&.white-outline {
 		border: 2px solid $color-white;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 
 	&.primary {
 		background-color: $color-grey-9;
+		
+		&:hover {
+			background-color: $color-grey-7;
+		}
 	}
 }
-
-
-//   &:hover {
-//     text-decoration: none;
-//   }
 
 //   &.primary {
 //     @include hover-and-active-background-colors($color-primary, 4%, 12%, $color-white);

@@ -4,7 +4,7 @@
 
   .carousel {
     display: flex;
-    height: 65vh;
+    height: 75vh;
     margin: 2em 0;
     justify-content: center;
 
@@ -41,5 +41,15 @@
         }
       }
     }
-  }
+	}
+	
+	nav {
+		width: 100%;
+		text-align: center;
+		
+		span {
+			display: inline-block;
+		}
+	}
 }
+
