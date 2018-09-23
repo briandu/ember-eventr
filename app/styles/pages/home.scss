@@ -1,3 +1,9 @@
-h1 {
-	text-align: center;
+.page-wrapper.home {
+	padding-bottom: 5em;
+
+	> h1 {
+		font-size: 1.5em;
+		text-align: center;
+		margin-bottom: 2em;
+	}
 }

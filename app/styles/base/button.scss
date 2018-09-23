@@ -6,6 +6,10 @@
 	text-transform: uppercase;
 	color: $color-white;
 
+	&.large {
+		font-size: 1em;
+	}
+
 	&.white-outline {
 		border: 2px solid $color-white;
 
