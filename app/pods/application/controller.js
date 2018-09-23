@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import { computed }  from '@ember/object';
 import { reads }  from '@ember/object/computed';
+import $ from 'jquery';
 
 export default Controller.extend({
 	appController: Ember.inject.controller('application'),

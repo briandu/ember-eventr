@@ -1,16 +1,18 @@
 <header>
 	<div class="content">
 		<h1>john legend: darkness and light</h1>
-		<div class="button white-outline">BUY TICKETS</div>
+		{{#link-to "event"}}
+			<div class="button white-outline">BUY TICKETS</div>
+		{{/link-to}}
 	</div>
 	<img src="assets/header-john-legend.jpg">
 </header>
 
 <div class="search-wrapper">
 	<div class="search-bar">
-		{{text-input type='text' label='SEARCH'}}
-		{{text-input type='text' label='LOCATION'}}
-		{{text-input type='text' label='CATEGORY'}}
+		{{text-input type='text' placeholder='John Legend' label='SEARCH'}}
+		{{text-input type='text' placeholder='Toronto, ON' label='LOCATION'}}
+		{{text-input type='text' placeholder='Music' label='CATEGORY'}}
 		<div class="button primary">
 			<img src="assets/icons/icon-search-white.svg">
 			search

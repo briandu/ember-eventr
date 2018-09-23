@@ -28,6 +28,7 @@ export default Component.extend({
 			storage.set('user', {
 				loggedIn: false
 			})
+			this.get('router').transitionTo('home')
     },
 	}
 });

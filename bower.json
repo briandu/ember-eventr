@@ -1,0 +1,6 @@
+{
+  "name": "ember-eventr",
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}

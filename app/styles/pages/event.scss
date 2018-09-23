@@ -1,12 +1,15 @@
 .event-bar-wrapper {
   padding: 1.5em 0;
   border-top: 1px solid $color-grey-3;
-  background-color: $color-white;
+	background-color: $color-white;
+	position: sticky;
+	top: 5em;
+	box-shadow: $box-shadow;
 
   .event-bar {
     @include layout-container;
     display: flex;
-    align-items: center;
+		align-items: center;
 
     .date {
       text-align: center;

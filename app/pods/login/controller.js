@@ -10,7 +10,7 @@ export default Controller.extend({
 			storage.set('user', {
 				loggedIn: true
 			})
-			this.transitionToRoute('discover');
+			this.get('router').transitionTo('event')
 		}
 	}
 });

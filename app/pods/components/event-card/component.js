@@ -1,11 +1,7 @@
 import Component from '@ember/component';
-import { inject as service } from '@ember/service';
 
 export default Component.extend({
 	tagName: 'event-card',
-
-  // ----- Injected Services -----
-	router: service(),
 
 	mouseEnter() {		
 		this.$().css('transform', 'translateY(-.4em)');
@@ -19,6 +15,11 @@ export default Component.extend({
 
 	click() {
 		this.transitionTo('discover');
-	}
-	
+	},
+
+	actions:{
+		transitionToEvent(){
+			this.get('router').transitionTo('event')
+		}
+	}	
 });
