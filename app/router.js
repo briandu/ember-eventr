@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('discover');
   this.route('login');
   this.route('sign-up');
+  this.route('event');
 });
 
 export default Router;

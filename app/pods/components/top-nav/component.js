@@ -9,10 +9,6 @@ export default Component.extend({
 
 	userService: service('user'),
 
-	test: computed('userService.userLoggedIn', function() {
-		return this.get('userService.userLoggedIn');
-	}),
-
 	actions: {
 		setActive() {
 			this.set('logoUrl', '/assets/eventr-logo-animated.gif');

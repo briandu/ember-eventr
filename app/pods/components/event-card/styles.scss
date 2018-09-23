@@ -3,24 +3,23 @@ $card-footer-height: 3.5em;
 $event-card-image-height: calc((26em - 3.5em) * .55);
 
 & {
-	margin: 0 .7em 2em;
+  margin: 0 .7em 2em;
   width: calc(33.3% - 1.4em);
-	flex-shrink: 1;
-	transition: .5s;
-	transform: translateY(0);
-	cursor: pointer;
+  flex-shrink: 1;
+  transition: .5s;
+  transform: translateY(0);
+  cursor: pointer;
 
-	&.animate {
-		box-shadow: $box-shadow-spread;
-	}
+  &.animate {
+    box-shadow: $box-shadow-spread;
+  }
 }
 
 .card {
-	width: 100%;
-	height: 100%;
+  width: 100%;
   box-shadow: $box-shadow;
   height: $event-card-height;
-	background-color: $color-white;
+  background-color: $color-white;
 
   .image {
     height: $event-card-image-height;

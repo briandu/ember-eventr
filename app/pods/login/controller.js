@@ -10,8 +10,7 @@ export default Controller.extend({
 			storage.set('user', {
 				loggedIn: true
 			})
-			this.set('userService.fakeLoggedIn', true);
-			console.log(this.get('userService.fakedLoggedIn'));
+			this.transitionToRoute('discover');
 		}
 	}
 });
