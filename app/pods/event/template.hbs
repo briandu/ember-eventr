@@ -1,1 +1,44 @@
-{{outlet}}
+<div class="event-bar-wrapper">
+	<div class="event-bar">
+		<div class="date">
+			<span>{{model.eventInfo.month}}</span>
+			<span>{{model.eventInfo.day}}</span>
+		</div>
+
+		<div class="event-main-info">
+			<span>{{model.eventInfo.time}}</span>
+			<span>{{model.eventInfo.name}}</span>
+		</div>
+
+		<div class="button primary">GOING</div>
+	</div>
+</div>
+
+<main>
+	<div class="main-content-wrapper">
+		<div class="main-content">
+			<div class="image-wrapper">
+				<img src="/assets/event-images/bruno-mars-24k-magic.jpg">
+			</div>
+			
+			<span class="section-label">DESCRIPTION</span>
+			<div class="description">
+				<p>
+					The 24K Magic World Tour is the third concert tour by American singer Bruno Mars, to support his album 24K Magic. It began March 28, 2017, at the Sportpaleis in Antwerp, and will conclude at Aloha Stadium in Honolulu on November 11, 2018. Mars announced more North American dates for late 2018.
+				</p>
+			</div>
+
+			<span class="section-label">GROUPS</span>
+			<div class="event-groups-wrapper">
+				<div class="event-groups">
+					{{#each model.eventGroups as |group|}}
+						{{event-group-card group=group}}
+					{{/each}}
+				</div>
+			</div>
+		</div><div class="side-info">
+			<iframe width="100%" height="288" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJnyfYfCvL1IkRUlGhoBytuBI&key=AIzaSyBzLQdTniZIPiCmQLaC_CayI4KJrR4KKsM" allowfullscreen></iframe>
+			<span class="section-label">EVENTRS GOING</span>
+		</div>
+	</div>
+</main>

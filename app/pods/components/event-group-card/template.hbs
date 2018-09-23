@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="content">
+		<h3>{{group.name}}</h3>
+		<p>{{group.description}}</p>
+		<div class="members">
+			{{#each group.images as |image|}}
+				<div>
+					<img src="{{image}}">
+				</div>
+			{{/each}}
+			<span>+{{randomNumOfMembers}}</span>
+		</div>
+  </div>
+  <div class="card-footer">
+    <div class="attendance">
+      <span>10</span> EVENTRS
+    </div>
+
+    <div class="button-going">GOING</div>
+  </div>
+</div>
