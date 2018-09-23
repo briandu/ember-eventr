@@ -1,10 +1,17 @@
 import Component from '@ember/component';
-import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
+import { computed }  from '@ember/object';
 
 export default Component.extend({
 	tagName: 'top-nav',
 
 	logoUrl: '/assets/eventr-logo.svg',
+
+	userService: service('user'),
+
+	test: computed('userService.userLoggedIn', function() {
+		return this.get('userService.userLoggedIn');
+	}),
 
 	actions: {
 		setActive() {

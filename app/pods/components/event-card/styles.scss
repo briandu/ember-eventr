@@ -5,7 +5,14 @@ $event-card-image-height: calc((26em - 3.5em) * .55);
 & {
 	margin: 0 .7em 2em;
   width: calc(33.3% - 1.4em);
-  flex-shrink: 1;
+	flex-shrink: 1;
+	transition: .5s;
+	transform: translateY(0);
+	cursor: pointer;
+
+	&.animate {
+		box-shadow: $box-shadow-spread;
+	}
 }
 
 .card {
@@ -13,7 +20,7 @@ $event-card-image-height: calc((26em - 3.5em) * .55);
 	height: 100%;
   box-shadow: $box-shadow;
   height: $event-card-height;
-  background-color: $color-white;
+	background-color: $color-white;
 
   .image {
     height: $event-card-image-height;
