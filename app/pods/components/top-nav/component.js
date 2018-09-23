@@ -1,11 +1,13 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { computed }  from '@ember/object';
+import storage from 'ember-eventr/utils/storage';
+
 
 export default Component.extend({
 	tagName: 'top-nav',
 
 	logoUrl: '/assets/eventr-logo.svg',
+	panelActive: false,
 
 	userService: service('user'),
 
@@ -16,6 +18,16 @@ export default Component.extend({
 
 		setInactive() {
 			this.set('logoUrl', '/assets/eventr-logo.svg');
-		}
+		},
+
+    togglePanel() {
+			this.toggleProperty('panelActive');
+		},
+		
+    logout() {
+			storage.set('user', {
+				loggedIn: false
+			})
+    },
 	}
 });

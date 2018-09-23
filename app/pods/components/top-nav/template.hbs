@@ -5,8 +5,15 @@
   <ul class="nav-links">
     <li>{{link-to 'HOME' 'home'}}</li>
     <li>{{link-to 'DISCOVER' 'discover'}}</li>
-		{{#if test}}
-    	<li class="user-profile"></li>
+		{{#if userService.userLoggedIn}}
+    	<li class="user-profile" {{action 'togglePanel'}}>
+				<img src="/assets/profile-brian.jpg">
+			</li>
+			{{#if panelActive}}
+				<div class="panel">
+					<span {{action 'logout'}}>Log Out</span>
+				</div>
+			{{/if}}
 		{{else}}
 		  <li>{{link-to 'LOGIN' 'login'}}</li>
     	<li>{{link-to 'SIGN UP' 'sign-up'}}</li>
