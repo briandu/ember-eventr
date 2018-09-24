@@ -5,15 +5,12 @@
       <img src="{{image.imageUrl}}">
 			<div class='content'>
 				<h1>{{image.title}}</h1>
-				<div class="button white-outline large">get tickets</div>
+				{{#link-to "event"}}
+					<div class="button white-outline large">get tickets</div>
+				{{/link-to}}
 			</div>
     </div>
     {{/each}}
   </div>
-	
-	<nav>
-		<span class="prev" {{action "prevImage"}}>left</span>
-		<span class="next" {{action "nextImage"}}>right</span>
-	</nav>
 </div>
 

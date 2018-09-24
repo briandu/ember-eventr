@@ -1,6 +1,13 @@
 & {
 	width: calc(33.3% - 1.4em);
 	background-color: $color-white;
+	transition: .5s;
+  transform: translateY(0);
+  cursor: pointer;
+
+  &.animate {
+    box-shadow: $box-shadow-spread;
+  }
 
 	.content {
 		padding: 1.5em;
@@ -36,10 +43,6 @@
 				border-radius: 10em;
 				object-fit: cover;
 				margin-right: -.5em;
-			}
-
-			span {
-
 			}
 		}
 	}

@@ -72,7 +72,14 @@ main {
     .side-info {
       display: inline-block;
       width: 30%;
-      vertical-align: top;
+			vertical-align: top;
+			
+			img {
+				width: 2.5em;
+				height: 2.5em;
+				border-radius: 10em;
+				object-fit: cover;
+			}
     }
   }
 }
@@ -111,6 +118,22 @@ main {
   .section-label {
     display: block;
     margin: 1em 0;
-  }
+	}
+	
+	.eventrs-going {
+		display: flex;
+		flex-wrap: wrap;
+
+		div {
+			margin: .5em .5em 0 0;
+			cursor: pointer;
+			transform: scale(1);
+			transition-duration: .4s;
+
+			&:hover {
+				transform: scale(1.1, 1.1);
+			}
+		}
+	}
 }
 
