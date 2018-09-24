@@ -1,15 +1,16 @@
 .event-bar-wrapper {
+  font-size: (12 / 16) * 1em;
+  position: sticky;
+  top: 6.65em;
+  box-shadow: $box-shadow;
   padding: 1.5em 0;
   border-top: 1px solid $color-grey-3;
-	background-color: $color-white;
-	position: sticky;
-	top: 5em;
-	box-shadow: $box-shadow;
+  background-color: $color-white;
 
   .event-bar {
     @include layout-container;
     display: flex;
-		align-items: center;
+    align-items: center;
 
     .date {
       text-align: center;
@@ -22,6 +23,12 @@
           margin-top: .2em;
         }
       }
+    }
+
+    .button {
+      width: 8em;
+      padding: 1.2em 0;
+      text-align: center;
     }
   }
 
@@ -72,14 +79,14 @@ main {
     .side-info {
       display: inline-block;
       width: 30%;
-			vertical-align: top;
-			
-			img {
-				width: 2.5em;
-				height: 2.5em;
-				border-radius: 10em;
-				object-fit: cover;
-			}
+      vertical-align: top;
+
+      img {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 10em;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -107,7 +114,7 @@ main {
   .event-groups {
     display: flex;
     flex-wrap: wrap;
-  
+
     event-group-card {
       margin: 0 .7em 1.4em;
     }
@@ -117,23 +124,23 @@ main {
 .side-info {
   .section-label {
     display: block;
-    margin: 1em 0;
-	}
-	
-	.eventrs-going {
-		display: flex;
-		flex-wrap: wrap;
+    margin: 2em 0;
+  }
 
-		div {
-			margin: .5em .5em 0 0;
-			cursor: pointer;
-			transform: scale(1);
-			transition-duration: .4s;
+  .eventrs-going {
+    display: flex;
+    flex-wrap: wrap;
 
-			&:hover {
-				transform: scale(1.1, 1.1);
-			}
-		}
-	}
+    div {
+      margin: .5em .5em 0 0;
+      cursor: pointer;
+      transform: scale(1);
+      transition-duration: .4s;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
 }
 

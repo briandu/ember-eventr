@@ -9,8 +9,8 @@ export default Controller.extend({
 		authenticate() {
 			storage.set('user', {
 				loggedIn: true
-			})
-			this.set('userService.active', true)
+			});
+			this.set('userService.active', true);
 			this.get('router').transitionTo('discover');
 		}
 	}

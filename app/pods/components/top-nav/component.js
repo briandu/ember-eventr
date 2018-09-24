@@ -15,6 +15,12 @@ export default Component.extend({
 
 	isLoggedIn: reads('userService.active'),
 
+  click(event) {
+		if (!this.$(event.target).hasClass('panel')) {
+			console.log('test');
+		}
+	},
+
 	actions: {
 		setActive() {
 			this.set('logoUrl', '/assets/eventr-logo-animated.gif');
@@ -34,7 +40,7 @@ export default Component.extend({
 			})
 			this.toggleProperty('panelActive');
 			this.set('userService.active', false);
-			this.get('router').transitionTo('home');
+			this.get('router').transitionTo('event');
     },
 	}
 });
