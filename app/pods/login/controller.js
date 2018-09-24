@@ -10,7 +10,8 @@ export default Controller.extend({
 			storage.set('user', {
 				loggedIn: true
 			})
-			this.get('router').transitionTo('event')
+			this.set('userService.active', true)
+			this.get('router').transitionTo('discover');
 		}
 	}
 });

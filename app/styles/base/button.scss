@@ -5,6 +5,7 @@
   cursor: pointer;
 	text-transform: uppercase;
 	color: $color-white;
+	transition-duration: .2s;
 
 	&.large {
 		font-size: 1em;
@@ -14,7 +15,7 @@
 		border: 2px solid $color-white;
 
 		&:hover {
-			text-decoration: none;
+			background-color: $color-white-25;
 		}
 	}
 

@@ -1,6 +1,8 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import storage from 'ember-eventr/utils/storage';
+import { computed } from '@ember/object';
+import { reads }  from '@ember/object/computed';
 
 
 export default Component.extend({
@@ -10,6 +12,8 @@ export default Component.extend({
 	panelActive: false,
 
 	userService: service('user'),
+
+	isLoggedIn: reads('userService.active'),
 
 	actions: {
 		setActive() {
@@ -28,7 +32,9 @@ export default Component.extend({
 			storage.set('user', {
 				loggedIn: false
 			})
-			this.get('router').transitionTo('home')
+			this.toggleProperty('panelActive');
+			this.set('userService.active', false);
+			this.get('router').transitionTo('home');
     },
 	}
 });

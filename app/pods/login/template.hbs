@@ -2,9 +2,9 @@
 	<h2>LOG IN</h2>
 	<form>
 		{{text-input type='text' label='EMAIL'}}
-		{{text-input type='text' label='PASSWORD'}}
+		{{text-input type='password' label='PASSWORD'}}
 		<div class="submit">
-			<span>REMEMBER ME</span>
+			<span>{{input type="checkbox"}} REMEMBER ME</span>
 			<div class="button primary" {{action 'authenticate'}}>LOGIN</div>
 		</div>
 	</form>
